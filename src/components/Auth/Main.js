@@ -4,44 +4,10 @@ import { Outlet, Link, NavLink } from "react-router-dom";
 const { Header, Content, Footer } = Layout;
 
 function Main({ children }) {
-    const items = [
-        {
-            label: (
-                <a href="/">
-                    Page 1
-                </a>
-            ),
-            key: 'FirstPage',
-        },
-        {
-            label: (
-                <a href="/SecondPage">
-                    Page 2
-                </a>
-            ),
-            key: 'SecondPage',
-        },
-        {
-            label: (
-                <a href="/ThirdPage">
-                    Page 3
-                </a>
-            ),
-            key: 'ThirdPage',
-        },
-        {
-            label: (
-                <a href="/PageFour">
-                    Page 4
-                </a>
-            ),
-            key: 'PageFour',
-        },
-    ]
 
     return (
         <>
-            <Header
+            {/* <Header
                 style={{
                     display: 'flex',
                     alignItems: 'center',
@@ -59,17 +25,17 @@ function Main({ children }) {
                         Aungpor PC Transfer
                     </Menu>
                 </Menu>
-            </Header>
+            </Header> */}
 
             <Content className="content-ant">{children}</Content>
 
-            <Footer
+            {/* <Footer
                 style={{
                     textAlign: 'center',
                 }}
             >
                 Ant Design ©2023 Created by Ant UED
-            </Footer>
+            </Footer> */}
         </>
 
     )
