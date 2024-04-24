@@ -1,9 +1,10 @@
 import React, { useState, useEffect } from 'react';
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route, Switch } from "react-router-dom";
 import "./assets/styles/main.css";
 import Layout from './pages/Layout'
-import Main from './components/Main'
+import Main from './components/Auth/Main'
 import HomePage from './pages/HomePage'
+import TestPage from './pages/TestPage'
 
 
 export default function App() {
@@ -12,11 +13,9 @@ export default function App() {
     <Main>
       <BrowserRouter>
         <Routes>
-          <Route path="/" element={<Layout />}>
+          <Route path="/">
             <Route index element={<HomePage />} />
-            {/* <Route path="SecondPage" element={<SecondPage />} />
-            <Route path="ThirdPage" element={<ThirdPage />} />
-            <Route path="PageFour" element={<PageFour />} /> */}
+            <Route path="test" element={<TestPage />} />
           </Route>
         </Routes>
       </BrowserRouter>
